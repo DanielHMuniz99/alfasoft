@@ -30,7 +30,7 @@
                                                     <form action="{{ route('people.destroy', $person) }}" method="POST" style="display:inline-block">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                                     </form>
                                                 @endauth
                                             </td>
@@ -47,13 +47,3 @@
     </div>
 </div>
 @include("footer")
-
-@push('scripts')
-<!-- DataTables -->
-
-<script>
-    $(document).ready(function () {
-        // $('#people-table').DataTable();
-    });
-</script>
-@endpush
