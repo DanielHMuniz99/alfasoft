@@ -19,7 +19,7 @@ class RestCountriesService implements CountryServiceInterface
                 throw new \Exception('API did not respond with success');
             }
         } catch (\Exception $e) {
-            $json = Storage::get('data/countries.json');
+            $json = file_get_contents(database_path('data/countries.json'));
             $countries = json_decode($json, true);
         }
 
